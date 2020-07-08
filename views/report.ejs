@@ -1,0 +1,43 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <div class="content-box">
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="vl"></div>
+
+  <div class="reportView">
+    <h2><%= report.reportType %></h2>
+    <div class="content">
+      <p class="detail-description"><%= report.description %></p>
+    </div>
+    <a class="delete" data-doc="<%= report._id %>">delete</a>
+  </div>
+</div>
+
+  <%- include("./partials/footer.ejs") %>
+</div>
+  <!-- 
+  Frontend script
+  I - Dodaje event listener na dugme delete i poziva server
+  na endpoint vrednosti id sa zahtevom DELETE
+  II - frontend ceka odgovor, preuzima odgovor, 
+  pretvara odgovor u json objekat da bi moglo da
+  se prstupi parametrima odgovor -->
+  <script>
+    // I
+    const objToDelete = document.querySelector('a.delete')
+    objToDelete.addEventListener('click', (event) => {
+      const endpoint = `/admin/${objToDelete.dataset.doc}`
+      fetch(endpoint, {
+        method: 'DELETE',
+      })
+    // II
+      .then(response => response.json())
+      .then(data => window.location.href = data.redirect)
+      .catch(err => console.log(err))
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <div class="content-box">
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="vl"></div>
+
+  <div class="createView">
+    <div class="createBox">
+    <form action="/user/createreport" method="POST">
+      <label for="reportType">Issue:</label>
+      <textarea type="text" id="reportType" name="reportType" required></textarea>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea>
+    </div>
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

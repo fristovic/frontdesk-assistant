@@ -1,0 +1,28 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <div class="content-box">
+  <%- include("./partials/nav.ejs") %>
+
+  <div class="vl"></div>
+
+  <div class="createView">
+    <div class="createBox">
+    <form action="/createuser" method="POST">
+      <label for="admin">Administrator: </label>
+      <input type="checkbox" id="admin" name="admin" value="true">
+      <label for="username">Username:</label>
+      <textarea id="username" name="username" required></textarea>
+      <label for="password">Password:</label>
+      <textarea id="password" name="password" required></textarea> 
+      <label for="room">Room number:</label>
+      <textarea id="room" name="room"></textarea>
+    </div>
+      <button>Submit</button>
+    </form>
+  </div>
+</div>
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

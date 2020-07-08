@@ -1,0 +1,30 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <div class="content-box">
+    <%- include("./partials/nav.ejs") %>
+
+    <div class="vl"></div>
+
+    <div class="reportView">
+      <h2>User Reports:</h2>
+        <% if (reports.length > 0) { %>
+          <% reports.forEach(report => { %>
+            <div class="single"<%= report._id %>">
+              <h3 class="reportType"><%= report.reportType %></h3>
+              <h5 class="description"><%= report.description %></h5>
+              <p class="createdAt"><%= report.createdAt.getFullYear() + "-" + (report.createdAt.getMonth() + 1) + "-" + report.createdAt.getDate() + " " + report.createdAt.getHours() + ":" + report.createdAt.getMinutes() + ":" + report.createdAt.getSeconds() %></p>
+            </div>
+            <% }) %>
+          <% } else { %>
+        <p>There are no reports to display...</p>
+      <% } %>
+    </div>
+  
+   
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

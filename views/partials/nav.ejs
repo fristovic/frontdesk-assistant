@@ -1,0 +1,13 @@
+<nav>
+    <div class="site-title">
+        <a href="/"><img src="/FDA-logo.png" alt="FrontDeskAssistant logo"></a>
+    <ul>
+        <li><a style="color: #2b2d42; text-decoration: none;" href="/">Home screen</a></li>
+        <% if (!admin) { %>
+            <li><a style="color: #2b2d42; text-decoration: none;" href="/user/createreport">Create Report</a></li>
+        <% } else {  %>
+            <li><a style="color: #2b2d42; text-decoration: none;" href="/createuser">Create New User</a></li>
+        <% } %>
+    </ul>
+    </div>
+</nav>
