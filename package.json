@@ -1,6 +1,9 @@
 {
   "name": "fdassistant",
   "version": "1.0.0",
+  "engines": {
+   "node": "12.11.1"
+   },
   "description": "Virtual Front Desk assistant app",
   "main": "app.js",
   "scripts": {
