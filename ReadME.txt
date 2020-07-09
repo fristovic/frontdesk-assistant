@@ -11,16 +11,16 @@ DEFAULT USER:
 
 AS ADMIN:
 1. When you login you should see reports of all guests listed on the page under "Reports:", if there are no current reports it should say that there is no reports to display.
-  1.1. If there are user reports, you can see the details of the report andclick on each individual report.
+  1.1. If there are user reports, you can see the details of the report and click on each individual report.
   App then shows you only that report and adds "Delete"  button that deletes or closes that report when the problem is resolved.
   1.2. When you delete a user report, app should redirect you to the previous page where you can see all the reports. Now the post you have just deleted should not be in the list.
 2. On the left side, under the logo, there should be 2 buttons: "Home screen" - works like logout button, and returns you to the login screen, and "Create New User".
-3. When you click on "Create New User" it loads another page where you can imput parameters for your new admin/guest account.
-  3.1. If the user you are creating is a new admin check the check the checkbox next to "Administrator", also "Room number" is an optional field.
+3. When you click on "Create New User" it loads another page where you can input parameters for your new admin or guest account.
+  3.1. If the user you are creating is a new admin account tick the checkbox next to "Administrator"  also note that "Room number" is the only optional field.
 4. When the user fields are filled click "Submit" button, and the app will redirect you back to login page.
 
 AS USER:
-1. When you login you should see that user reports listed on the page under "User reports" (Each user can see only his/hers reports on this page, unlike admin users who can see
+1. When you login you should see only that users reports listed on the page under "User reports" (Each user can see only his/hers reports on this page, unlike admin users who can see
 the reports of all users). Also, unlike admin users, normal or "guest" users cannot click on or delete each individual report and have to wait for admin users to resolve the issue first.
 2. On the left side, under the logo, there should be 2 buttons: "Home screen" - works like logout button, and returns you to the login screen, and "Create Report".
 3. When you click on "Create Report" app loads another page where you can create a new report that takes in Report type and report description as parameters.
