@@ -13,7 +13,7 @@ const controler = require('./controlers/controlers')
 //MongoDB -- Note: Not listening unless DB is connected (Failsafe)
 const dbURI = process.env.MONGO_URI
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true})
-    .then((result) => app.listen(process.env.PORT || 3000))
+    .then((result) => app.listen(3000))
     .catch((err) => console.log(err))
 
 //express and middleware
