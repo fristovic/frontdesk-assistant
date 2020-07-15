@@ -22,8 +22,7 @@ const user_login = async (req, res) => {
                 res.redirect("/user")
             }
         } else {
-            res.send('Wrong password')
-            res.redirect('/')
+            res.status(400).render('errors/400.ejs')
         }
     } catch {
         res.status(500);

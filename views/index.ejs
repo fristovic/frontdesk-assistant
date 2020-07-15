@@ -9,11 +9,14 @@
       <form action="/" method="POST">
         <div class="username">
           <label for="username">Username:</label>
-          <textarea id="username" name="username" required></textarea>
+          <input type="text" id="username" name="username" required>
         </div>
         <div class="password">
           <label for="password">Password:</label>
-          <textarea id="password" name="password" required></textarea>
+          <div>
+            <input type="Password" id="password" name="password" required>
+            <i class="fa fa-eye" aria-hidden="true" onclick="toggle()"></i>
+          </div>
         </div>
         <button>Submit</button> 
       </form>
@@ -21,5 +24,16 @@
   </div>
 
   <%- include("./partials/footer.ejs") %>
+  <script>
+    let state= false;
+    toggle = () =>{
+      if (state) {
+        document.getElementById("password").setAttribute("type","password");
+        state = false;
+      } else {
+        document.getElementById("password").setAttribute("type","text");
+        state = true;
+      }}
+  </script>
 </body>
 </html>

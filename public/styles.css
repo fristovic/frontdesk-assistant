@@ -127,6 +127,17 @@ body{
   align-content: center;
 }
 
+.form-box input {
+  border: solid black 1px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding-left: 5px;
+  resize: none;
+  width: 100%;
+  height: 25px;
+}
+
 .form-box textarea {
   margin-top: 5px;
   margin-bottom: 15px;
@@ -148,7 +159,7 @@ li:hover {
   border-radius: 5px;
 }
 
-input {
+.createBox input {
   margin-bottom: 15px;
   margin-right: 80%;
 }
@@ -206,4 +217,21 @@ footer{
   font-size: 11px;
 }
 
+.fa {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px;
+  padding: 4px;
+  font-size: 15px;
+  background-color: white;
+  border: solid black 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.fa:hover{
+  margin-top: 6px;
+  margin-left: 6px;
+  border: none;
+  background-color:#ef233c ;
+}
 
